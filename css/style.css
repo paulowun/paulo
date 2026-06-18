@@ -1,0 +1,169 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Esconde o botão do menu por padrão (no Desktop) */
+.menu-toggle {
+    display: none;
+    background: #e67e22;
+    color: white;
+    border: none;
+    font-size: 30px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+nav {
+    background: #e67e22;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #d35400;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(190, 85, 24, 0.822);
+}
+
+.button:active {
+    transform: translateY(0px);
+}
+
+@keyframes carregar {
+    from { width: 0%; }
+    to   { width: 100%; }
+} 
+
+.barra-container {
+    width: 100%;
+    background: #e2e8f0;
+    border-radius: 999px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.barra-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #eb974e, #e67e22);
+    border-radius: 999px;
+    width: 0%;  
+    animation: carregar 2s ease-out 0.5s forwards;
+}
+
+.container-especifico {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+.conteudo {
+    flex: 1; 
+}
+
+.rodape {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+    flex-shrink: 0; 
+}
+
+
+@media (max-width: 768px) {
+    
+    .menu-toggle {
+        display: block;
+    }
+
+   
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    
+    .nav-menu.active {
+        display: flex;
+    }
+
+    
+    .nav-menu a {
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid #d35400;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
