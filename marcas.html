@@ -18,6 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-BSLK6DZ5K3');
 </script>     
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Cerveja & Cultura</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,6 +27,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header>
     <h1>Cerveja & Cultura</h1>
 </header>
+
+<button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>     
 
 <nav>
     <a href="index.html">Home</a>
@@ -57,3 +60,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li>Eisenbahn (Brasil)</li>
     </ul>
 </section>
+
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>     
