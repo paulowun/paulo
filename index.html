@@ -18,6 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-BSLK6DZ5K3');
 </script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Cerveja & Cultura</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -30,6 +31,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
     <h1>Cerveja & Cultura</h1>
 </header>
+
+<button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>   
 
 <nav>
     <a href="index.html">Home</a>
@@ -49,11 +52,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Bem-vindo ao Universo Cervejeiro</h2>
     <p>A cerveja é uma das bebidas mais antigas e amadas do mundo. Explore nosso site para descobrir desde a sua origem milenar até as técnicas modernas de fabricação artesanal.</p>
     <p>Use o menu acima para navegar pelos conteúdos!</p>
+
+    <h2>Aprovação do Cerveja & Cultura</h2>
+    <div class="barra-container">
+      <div class="barra-fill"></div>
+    </div>
 </main>
 
 <a target="_blank" href="https://uniube.br/"><img src="imagens/uniube.jpg" alt=""></a>
 
 <footer>Paulo Oliveiro Lima Figueiredo | 5027783</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
